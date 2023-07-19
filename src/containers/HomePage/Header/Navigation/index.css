@@ -1,0 +1,60 @@
+.right-bar{
+    height: 100vh;
+    width: 93%;
+}
+.navigation{
+    display: flex;
+    position: absolute;
+    right: 10px;
+    align-items: baseline;
+    color: white;
+}
+.navigation > a{
+    list-style: none;
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+    padding: 5px;
+}
+.navigation > a:hover{
+    color: lightgray;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.main-phrase{
+    position: absolute;
+    bottom: 10%;
+    width: 37%;
+    left: 25%;
+    color: #FFFFFF;
+}
+.order-link{
+    background: #B59571;
+    width: 120px;
+    height: 35px;
+    border: 0;
+    color: white;
+}
+.order-link:hover{
+    background: #B59585;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.order-modal-enter {
+    opacity: 0;
+}
+.order-modal-enter-active {
+    opacity: 1;
+    transition: opacity 400ms;
+}
+.order-modal-exit {
+    opacity: 1;
+}
+.order-modal-exit-active {
+    opacity: 0;
+    transition: opacity 400ms
+}

@@ -1,0 +1,82 @@
+.react-tabs {
+    -webkit-tap-highlight-color: transparent;
+    width: 100%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+.react-tabs__tab-list {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.react-tabs__tab {
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.react-tabs__tab:not(.react-tabs__tab--selected)::after {
+    content: "";
+    display: block;
+    margin: auto;
+    position: absolute;
+    height: 3px;
+    width: 65%;
+    background: #B59571;
+    bottom: -5px;
+    left: 20%;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.react-tabs__tab:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.react-tabs__tab--selected{
+    position: relative;
+}
+
+.react-tabs__tab--selected::after{
+    content: "";
+    display: block;
+    margin: auto;
+    position: absolute;
+    height: 3px;
+    width: 70%;
+    background: #B59571;
+    bottom: -5px;
+    left: 20%
+}
+
+
+.react-tabs__tab--disabled {
+    color: GrayText;
+    cursor: default;
+}
+
+.react-tabs__tab:focus {
+    outline: none;
+}
+
+.react-tabs__tab-panel {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.react-tabs__tab-panel--selected {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}

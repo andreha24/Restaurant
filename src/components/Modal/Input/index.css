@@ -1,0 +1,10 @@
+.input-styles{
+    height: 40px;
+    font-size: 100%;
+    background: none;
+    color: white;
+    padding: 8px 12px;
+    border: 2px solid #bbb4b452;
+    width: 100%;
+    box-sizing: border-box;
+}

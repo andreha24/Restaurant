@@ -1,0 +1,23 @@
+.left-bar{
+    width: 7%;
+    height: 100vh;
+    background: #333333;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.logo{
+    margin-top: 20px;
+    text-align: center;
+}
+.social-media{
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+.social-media > img{
+    width: 80%;
+}

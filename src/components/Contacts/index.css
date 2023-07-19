@@ -1,0 +1,67 @@
+.contacts{
+    position: relative;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    justify-content: space-around;
+    height: 500px;
+}
+.line{
+    position: absolute;
+    left: 9%;
+}
+.contacts-container{
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    margin-top: 7%;
+    align-items: center;
+}
+.contacts-delivery-time{
+    width: 30%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.delivery-time{
+    width: 40%;
+    text-align: left;
+}
+.delivery-time > span:first-child{
+    font-size: 40px;
+}
+.delivery-time > span{
+    color: #B59571;
+}
+.map{
+    width: 65%;
+    color: white;
+    height: 100%;
+    position: relative;
+}
+.wrap{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-around;
+    padding-top: 15px;
+    margin: auto;
+    width: 70%;
+}
+.more-contacts{
+    background: #333333;
+    width: 55%;
+    left: -6%;
+    position: absolute;
+    height: 80%;
+    top: 10%;
+}
+.details > img, details > span{
+    margin-right: 10px;
+}
+.contacts-buttons{
+    display: flex;
+}
+

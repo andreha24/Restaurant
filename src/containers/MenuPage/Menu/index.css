@@ -1,0 +1,8 @@
+.react-tabs{
+    background: #B59571;
+}
+.react-tabs__tab-list{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}

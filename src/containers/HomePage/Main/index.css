@@ -1,0 +1,90 @@
+.container{
+    position: relative;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 120px;
+    flex-direction: column;
+}
+.line{
+    position: absolute;
+    left: 9%;
+}
+
+.about-restaurant, .about-menu, .about-delivery{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 3%;
+}
+.about-restaurant > div, .about-menu > div, .about-delivery > div{
+    width: 65%;
+    margin-top: 7%;
+}
+.about-restaurant > h1, .about-menu > h1, .about-delivery > h1{
+    width: 0;
+    font-size: 50px;
+}
+.menus{
+    width: 60%;
+    position: relative;
+    height: 190px;
+    top: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.frames{
+     width: 45%;
+     height: inherit;
+     border: 1px solid lightgray;
+}
+.frame{
+    width: 80%;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    flex-direction: column;
+    text-align: center;
+}
+.menu-line{
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+}
+
+.delivery-buttons{
+    width: 66%;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 15px;
+}
+.delivery-buttons > button{
+    margin: 22px;
+}
+.more-info{
+    background: #B59571;
+    width: 120px;
+    height: 35px;
+    font-weight: bold;
+    color: white;
+    border: 0px;
+}
+.more-info:hover{
+    background: #B59585;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.delivery-conditions{
+    border: 1px solid lightgray;
+    font-weight: bold;
+    background: white;
+    margin-left: 10px;
+}
+.delivery-conditions:hover{
+    cursor: pointer;
+    background: lightgray;
+    transition: 0.3s;
+}

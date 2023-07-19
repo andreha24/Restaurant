@@ -1,0 +1,36 @@
+.block-header::after{
+    content: '';
+    height: 3px;
+    width: 30px;
+    background: #B59571;
+    position: absolute;
+    top: 10px;
+    margin-left: 10px;
+}
+.menu-line:hover::after {
+    animation: move-line infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+@keyframes move-line {
+    0% {
+        right: 10px;
+    }
+
+    25%{
+        right: 0;
+    }
+
+    50%{
+        right: -10px;
+    }
+
+    75%{
+        right: 0;
+    }
+
+    100%{
+        right: 10px;
+    }
+}

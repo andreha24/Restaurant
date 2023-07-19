@@ -1,25 +1,44 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Provider } from 'react-redux'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+} from "react-router-dom";
+import HomePage from "./containers/HomePage";
+import PageMenu from "./containers/MenuPage";
+import DishDetails from "./containers/DishDetails";
+import CartPage from "./containers/CartPage";
+import PersonalPage from "./containers/PersonalPage";
+import store from './store'
+
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <Provider store={store}>
+            <Router>
+                <Switch>
+                    <Route exact path="/">
+                        <HomePage />
+                    </Route>
+                    <Route path="/page-menu" exact>
+                        <PageMenu />
+                    </Route>
+                    <Route path="/cart-page" exact>
+                        <CartPage/>
+                    </Route>
+                    <Route path="/page-menu/:dish">
+                        <DishDetails />
+                    </Route>
+                    <Route parh="/personal-page">
+                        <PersonalPage/>
+                    </Route>
+                </Switch>
+            </Router>
+        </Provider>
+    );
 }
 
 export default App;

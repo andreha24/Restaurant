@@ -1,0 +1,35 @@
+.basket-btn:hover{
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.6;
+}
+
+@keyframes show-basket-enter {
+    0% {
+        opacity: 0;
+        transform: translateX(400px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes show-basket-exit {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(400px);
+    }
+}
+
+.basket.entering {
+    animation: show-basket-enter .5s forwards;
+}
+
+.basket.exiting {
+    animation: show-basket-exit .5s forwards;
+}
