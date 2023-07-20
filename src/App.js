@@ -10,6 +10,7 @@ import PageMenu from "./containers/MenuPage";
 import DishDetails from "./containers/DishDetails";
 import CartPage from "./containers/CartPage";
 import PersonalPage from "./containers/PersonalPage";
+import LoginPage from "./containers/LoginPage";
 import store from './store'
 
 import './App.css';
@@ -32,8 +33,11 @@ function App() {
                     <Route path="/page-menu/:dish">
                         <DishDetails />
                     </Route>
-                    <Route parh="/personal-page">
+                    <Route path="/personal-page">
                         <PersonalPage/>
+                    </Route>
+                    <Route path="/login-page">
+                        <LoginPage/>
                     </Route>
                 </Switch>
             </Router>

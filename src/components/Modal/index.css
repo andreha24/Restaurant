@@ -43,9 +43,3 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.personal-info{
-    height: 75%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}

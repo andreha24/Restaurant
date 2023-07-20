@@ -29,11 +29,12 @@ const Basket = ({onclick, className }) => {
                             </div>
                         ))
                     }
-                    <Link to='/cart-page'>
-                        <button className='order-link'>Оформить заказ</button>
-                    </Link>
                 </>
             }
+
+            <Link to='/cart-page'>
+                <button className='order-link'>Оформить заказ</button>
+            </Link>
         </div>
     );
 };
