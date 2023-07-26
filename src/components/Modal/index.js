@@ -1,5 +1,5 @@
-import React, {useState, useRef} from "react";
-import {useSelector, useDispatch } from "react-redux";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Form, Field } from 'react-final-form'
 import DatePicker, { registerLocale } from "react-datepicker";
 import { setMinutes ,setHours, format } from "date-fns";
@@ -48,19 +48,17 @@ const Modal = ({onClick}) => {
 
     const composeValidators = (...validators) => value =>  validators.reduce((error, validator) => error || validator(value), undefined)
 
+    const dispatch = useDispatch();
+
     const onSubmit = (e) => {
         const formattedDateTime = format(e['data'], 'MM/dd/yy HH:mm');
 
-        console.log(            {
-            ...e,
-            data: formattedDateTime
-        });
-        return(
-            {
+        dispatch(addTable(
+        {
                 ...e,
                 data: formattedDateTime
-            }
-        )
+              }
+            ))
     }
 
 
@@ -155,7 +153,7 @@ const Modal = ({onClick}) => {
                                </Field>
 
 
-                           <Button title='Забронировать' className='order-link' type='submit'/>
+                           <Button title='Забронировать' className='order-link' type='submit' />
                        </form>
                    )}
 

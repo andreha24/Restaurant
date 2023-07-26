@@ -11,6 +11,7 @@
     justify-content: center;
     border: 1px solid #272727;
     border-radius: 7px;
+    flex-direction: column;
 }
 .login-form{
     width: 60%;

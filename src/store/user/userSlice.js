@@ -5,7 +5,6 @@ export const userSlice = createSlice({
     initialState: {
         userOrder: [],
         userTable: {},
-        userInfo: {}
     },
     reducers: {
             addTable : (state , action) => {

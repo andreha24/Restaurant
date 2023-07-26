@@ -1,9 +1,20 @@
 .user-wrapper{
     display: flex;
-    width: 100%;
     background: bisque;
-    height: 100%;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+}
+.user-container{
+    width: 90%;
+    height: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-profile{
+    display: flex;
+    flex-direction: column;
 }
 .user-img{
     height: 500px;
@@ -11,10 +22,35 @@
 }
 .user-info{
     display: flex;
-    flex-direction: column;
-}
-.user-info-detail{
-    display: flex;
     align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.user-preferences{
+    width: 40%;
+    background-color: white;
+}
+.user-table-wrapper{
+    width: 100%;
+    height: 45%;
+    flex-direction: column;
+    display: flex;
+    border-bottom: aliceblue;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.user-table{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-table-detail{
+    width: 80%;
+    display: flex;
     justify-content: space-between;
 }

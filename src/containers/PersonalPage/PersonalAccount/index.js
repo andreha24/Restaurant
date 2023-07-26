@@ -1,51 +1,84 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import {useSelector, useDispatch} from "react-redux";
 import {deleteTable} from "../../../store/user/userSlice";
 
+import Modal from "../../../components/Modal";
+
 import './index.css'
+import Button from "../../../components/Button";
 
 const PersonalAccount = () => {
-    const {username, phone_number, people, date, time} = useSelector(state => state.userReducer.userTable)
+    const [toggleModal, setToggleModal] = useState(false)
 
+    const changeModalView = () => {
+        setToggleModal(prev => !prev)
+    }
+
+    const email = localStorage.getItem('email');
+    const {username, phoneNumber, table, guests, data} = useSelector(state => state.userReducer.userTable)
+    
     return (
         <>
-            {username === undefined ?
+            {toggleModal && <Modal onClick={changeModalView}/>}
+
+            {email === null ?
                 <div>Для того чтобы пользоваться аккаунтом вам нужно <Link to='/login-page'>войти</Link> в него </div>
                 :
                 <div className='user-wrapper'>
-                    <div className='user-profile'>
+                    <div className='user-container'>
+                        <div className='user-profile'>
 
-                        <img src="/img/other/account.png" alt="user-photo" className='user-img' />
+                            <img src="/img/other/account.png" alt="user-photo" className='user-img' />
 
-                        <div className='user-info'>
-                            <div className='user-info-detail'>
-                                <h3>Имя пользователя: </h3><h1>{username}</h1>
-                            </div>
-                            <div className='user-info-detail'>
-                                <h3>Номер телефона:</h3><h2>{phone_number}</h2>
+                            <div className='user-info'>
+                                <span>Почта: </span><span>{email}</span>
                             </div>
                         </div>
 
-                    </div>
 
-                    <div className='user-preferences'>
-                        <div className='user-table'>
-                            <h2>Информация про забронированный столик</h2>
-                            <div>
-                                <span>Количество гостей: </span>
-                                <h3>{people}</h3>
+                        <div className='user-preferences'>
+                            <div className='user-table-wrapper'>
+                                {guests === undefined ?
+                                    <>
+                                        <h3>У вас нет забронированного столика, забронируйте нажав на кнопку ниже</h3>
+                                        <Button className='order-link' onClick={() => setToggleModal(true)} title='Забронировать столик' />
+                                    </>
+                                    :
+                                    <>
+                                        <h4>Информация про забронированный столик</h4>
+
+                                        <div className='user-table'>
+                                            <div className='user-table-detail'>
+                                                <span>Имя:</span>
+                                                <span>{username}</span>
+                                            </div>
+                                            <div className='user-table-detail'>
+                                                <span>Номер телефона:</span>
+                                                <span>{phoneNumber}</span>
+                                            </div>
+                                            <div className='user-table-detail'>
+                                                <span>Количество гостей:</span>
+                                                <span>{guests}</span>
+                                            </div>
+                                            <div className='user-table-detail'>
+                                                <span>Номер столика:</span>
+                                                <span>{table}</span>
+                                            </div>
+                                            <div className='user-table-detail'>
+                                                <span>Дата/время:</span>
+                                                <span>{data}</span>
+                                            </div>
+                                        </div>
+                                    </>
+                                }
                             </div>
-                            <div>
-                                <span>Дата/время: </span>
-                                <h3>{date}/{time}</h3>
+
+
+
+                            <div className='user-order'>
+                                <h2>Ваш заказ</h2>
                             </div>
-
-                        </div>
-
-
-                        <div className='user-order'>
-                            <h2>Ваш заказ</h2>
                         </div>
                     </div>
                 </div>

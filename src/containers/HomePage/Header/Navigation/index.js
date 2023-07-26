@@ -10,9 +10,14 @@ import './index.css'
 const Navigation = () => {
     const [modal, setModal] = useState(false)
 
+    const isEnter = localStorage.getItem('email');
+    console.log(isEnter);
+
     function ChangeModalView() {
         setModal(!modal)
     }
+
+
 
     return(
         <>
@@ -21,7 +26,10 @@ const Navigation = () => {
                 <Link to="/page-menu"><li>Меню</li></Link>
                 <Link to="/cart-page"> <li>Корзина</li> </Link>
                 <Link to="/personal-page"><li>Личный кабинет</li></Link>
-                <Link to="/login-page"><li>Войти</li></Link>
+                {isEnter !== null ? <Link to="/login-page"><li onClick={() => localStorage.clear()}>Выйти</li></Link>
+                    :
+                    <Link to="/login-page"><li>Войти</li></Link>
+                } 
                 <Button className='order-link' title='Бронь столика' onClick={ChangeModalView}/>
             </ul>
 

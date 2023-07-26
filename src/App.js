@@ -10,6 +10,7 @@ import PageMenu from "./containers/MenuPage";
 import DishDetails from "./containers/DishDetails";
 import CartPage from "./containers/CartPage";
 import PersonalPage from "./containers/PersonalPage";
+import RegistrationPage from "./containers/RegistrationPage";
 import LoginPage from "./containers/LoginPage";
 import store from './store'
 
@@ -38,6 +39,9 @@ function App() {
                     </Route>
                     <Route path="/login-page">
                         <LoginPage/>
+                    </Route>
+                    <Route path="/registration-page">
+                        <RegistrationPage/>
                     </Route>
                 </Switch>
             </Router>
