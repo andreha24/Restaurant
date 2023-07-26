@@ -20,7 +20,7 @@ const PersonalArea = () => {
         <>
         <div className='account'>
             <div className='account-links'>
-                <span>Личный кабинет</span>
+                <Link to="/login-page">Войти</Link>
                 <Link to="/personal-page"><img src="/img/other/account.png" alt="account"/></Link>
                 <img src="/img/other/basket.png" alt="basket" className='basket-btn' onClick={changeCartStatus}/>
                 {items.length}

@@ -40,7 +40,7 @@
 
 .login-form-input:focus {
     background-color: white;
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 13px 13px 100px #969696,
     -13px -13px 100px #ffffff;
 }
@@ -72,7 +72,7 @@
     border-radius: 50%;
     z-index: -1;
     background-color: #b59571;
-    transition: 1s ease;
+    transition: 0.7s ease;
 }
 
 .log-btn::before {
@@ -98,3 +98,12 @@
     filter: brightness(.8);
 }
 
+.login-field-wrapper{
+    position: relative;
+}
+.login-field-wrapper > span{
+    position: absolute;
+    right: 0;
+    top: -25px;
+    font-size: 15px;
+}

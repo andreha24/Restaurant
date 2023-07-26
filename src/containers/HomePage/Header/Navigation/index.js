@@ -19,10 +19,9 @@ const Navigation = () => {
         <div className='right-bar'>
             <ul className='navigation'>
                 <Link to="/page-menu"><li>Меню</li></Link>
-                <Link to="/page-menu"><li>Доставка</li></Link>
                 <Link to="/cart-page"> <li>Корзина</li> </Link>
                 <Link to="/personal-page"><li>Личный кабинет</li></Link>
-                <Link to="/login-page"><li>Войти в аккаунт</li></Link>
+                <Link to="/login-page"><li>Войти</li></Link>
                 <Button className='order-link' title='Бронь столика' onClick={ChangeModalView}/>
             </ul>
 
