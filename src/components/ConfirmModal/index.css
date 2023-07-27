@@ -1,0 +1,33 @@
+.confirm-modal{
+    position: absolute;
+    font-size: 20px;
+    background-color: salmon;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+.close-confirm-modal{
+    position: absolute;
+    cursor: pointer;
+    top: 5px;
+    right: 5px;
+}
+
+.confirm-modal-enter {
+    opacity: 0;
+}
+.confirm-modal-enter-active {
+    opacity: 1;
+    transition: opacity 400ms;
+}
+.confirm-modal-exit {
+    opacity: 1;
+}
+.confirm-modal-exit-active {
+    opacity: 0;
+    transition: opacity 400ms;
+}

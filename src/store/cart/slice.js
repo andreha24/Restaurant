@@ -8,7 +8,6 @@ export const cartSlice = createSlice({
     reducers: {
         add: (state, action) => {
             const isPresent = original(state).items.find(({ title }) => title === action.payload.title);
-            console.log(original(state))
 
             if (isPresent) {
                 state.items = original(state).items.map(item => {
@@ -33,7 +32,6 @@ export const cartSlice = createSlice({
     }
 })
 
-// Action creators are generated for each case reducer function
 export const { add, deleteItem } = cartSlice.actions
 
 export default cartSlice.reducer

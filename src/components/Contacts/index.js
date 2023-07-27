@@ -1,7 +1,7 @@
 import React, {useState}from "react";
 import SectionName from "./SectionName";
 import Button from "../../components/Button";
-import Modal from "../Modal";
+import OrderModal from "../OrderModal";
 
 import './index.css'
 
@@ -16,7 +16,7 @@ const Contacts = () => {
 
     return(
         <>
-        { modal && <Modal onClick={ChangeModalView}/>}
+        { modal && <OrderModal onClick={ChangeModalView}/>}
             <div className='contacts'>
                 <SectionName title='КОНТАКТЫ' className='line'/>
                   <div className='contacts-container'>

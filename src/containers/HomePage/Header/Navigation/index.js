@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import {Link} from "react-router-dom";
 import {CSSTransition} from "react-transition-group";
 import Button from "../../../../components/Button";
-import Modal from "../../../../components/Modal";
+import OrderModal from "../../../../components/OrderModal";
 import './index.css'
 
 
@@ -11,7 +11,6 @@ const Navigation = () => {
     const [modal, setModal] = useState(false)
 
     const isEnter = localStorage.getItem('email');
-    console.log(isEnter);
 
     function ChangeModalView() {
         setModal(!modal)
@@ -42,7 +41,7 @@ const Navigation = () => {
                 classNames='order-modal'
                 unmountOnExit
             >
-                <Modal onClick={ChangeModalView}/>
+                <OrderModal onClick={ChangeModalView}/>
             </CSSTransition>
         </>
     )

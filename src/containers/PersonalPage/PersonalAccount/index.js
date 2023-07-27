@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import {useSelector, useDispatch} from "react-redux";
 import {deleteTable} from "../../../store/user/userSlice";
 
-import Modal from "../../../components/Modal";
+import OrderModal from "../../../components/OrderModal";
 
 import './index.css'
 import Button from "../../../components/Button";
@@ -20,7 +20,7 @@ const PersonalAccount = () => {
     
     return (
         <>
-            {toggleModal && <Modal onClick={changeModalView}/>}
+            {toggleModal && <OrderModal onClick={changeModalView}/>}
 
             {email === null ?
                 <div>Для того чтобы пользоваться аккаунтом вам нужно <Link to='/login-page'>войти</Link> в него </div>
