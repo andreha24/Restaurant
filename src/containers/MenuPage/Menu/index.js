@@ -9,6 +9,7 @@ import './../../../tabs.css'
 const Menu = () => {
     const {breakfast, raw, bruschetta, coldAppetizer, fish,
         garnishs, grill, mangal, meat, soups, pasta, salads, withWine} = dishes
+
     return(
         <>
             <Tabs>

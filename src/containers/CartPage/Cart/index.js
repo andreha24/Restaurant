@@ -22,14 +22,13 @@ const Cart = () => {
 
     return (
         <>
-            <Button className='order-link' title='Вернуться к меню' onClick={() => history.push('/page-menu')}/>
-
             <div className='cart'>
                 {dishes.length === 0 ?
                     <div>
                         В вашей корзине нету блюд, перейдите в  <Link to='/page-menu'>меню</Link> и добавьте товары в корзину
                     </div>: (
                         <>
+                            <Button className='order-link' title='Вернуться к меню' onClick={() => history.push('/page-menu')}/>
                             {dishes.map((dish, index) => (
                                 <CartItem dish={dish} index={index} key={index} />
                             ))}

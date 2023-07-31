@@ -41,7 +41,7 @@ const Navigation = () => {
                 classNames='order-modal'
                 unmountOnExit
             >
-                <OrderModal onClick={ChangeModalView}/>
+                <OrderModal closeModal={ChangeModalView}/>
             </CSSTransition>
         </>
     )

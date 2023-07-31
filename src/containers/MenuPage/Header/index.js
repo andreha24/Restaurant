@@ -1,21 +1,25 @@
 import React from "react";
 import Aside from "../../../components/Aside";
 import Menu from "../Menu";
+import Contacts from "../../../components/Contacts";
 import PersonalArea from "../../../components/PersonalArea";
 
 import './index.css'
 
 const MenuPageHeader = () => {
     return(
-            <header className='header-menu'>
+            <div className='main-menu-container'>
                 <Aside/>
                 <div className='main-wrapper'>
-                   <div className='main-container'>
+                   <>
                            <PersonalArea/>
-                           <Menu/>
-                   </div>
+                            <div className='main-container'>
+                                <Menu/>
+                                <Contacts/>
+                            </div>
+                   </>
                 </div>
-            </header>
+            </div>
     )
 }
 

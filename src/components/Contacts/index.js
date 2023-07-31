@@ -16,7 +16,7 @@ const Contacts = () => {
 
     return(
         <>
-        { modal && <OrderModal onClick={ChangeModalView}/>}
+        { modal && <OrderModal closeModal={ChangeModalView}/>}
             <div className='contacts'>
                 <SectionName title='КОНТАКТЫ' className='line'/>
                   <div className='contacts-container'>

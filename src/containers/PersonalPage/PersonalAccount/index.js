@@ -20,7 +20,7 @@ const PersonalAccount = () => {
     
     return (
         <>
-            {toggleModal && <OrderModal onClick={changeModalView}/>}
+            {toggleModal && <OrderModal closeModal={changeModalView}/>}
 
             {email === null ?
                 <div>Для того чтобы пользоваться аккаунтом вам нужно <Link to='/login-page'>войти</Link> в него </div>

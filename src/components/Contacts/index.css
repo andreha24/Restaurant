@@ -1,8 +1,7 @@
 .contacts{
     position: relative;
     display: flex;
-    width: 80%;
-    margin: auto;
+    width: 90%;
     margin-top: 100px;
     justify-content: space-around;
     height: 500px;

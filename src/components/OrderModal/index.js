@@ -17,7 +17,7 @@ import './index.css'
 import {Link} from "react-router-dom";
 
 
-const OrderModal = ({onClick}) => {
+const OrderModal = ({closeModal}) => {
     const dispatch = useDispatch();
     const [showConfirmModal, setShowConfirmModal] = useState(false);
     const [startDate, setStartDate] = useState(
@@ -66,9 +66,6 @@ const OrderModal = ({onClick}) => {
                 data: formattedDateTime
               }
         ))
-        // have a question
-        {onClick()}
-
     };
 
 
@@ -85,7 +82,7 @@ const OrderModal = ({onClick}) => {
             <div className='order-modal'>
                 <div className='detail-info'>
                     <img src="/img/other/logo.png" alt="logo"/>
-                    <img src="/img/other/closer.png" alt="closer" className='close-modal' onClick={onClick}/>
+                    <img src="/img/other/closer.png" alt="closer" className='close-modal' onClick={closeModal}/>
                     <h3>ЗАБРОНИРОВАТЬ СТОЛИК</h3>
                     <Form
                         onSubmit={onSubmit}

@@ -1,64 +1,146 @@
-.dish-details{
+.page-container{
     display: flex;
-    justify-content: center;
-    margin-top: 30px;
+    flex-direction: column;
 }
-.dish-details-info{
+.main-dish-container{
     display: flex;
-    justify-content: space-evenly;
-    width: 85%;
-}
-.dish-details-info > img{
-    width: 350px;
-    height: 300px;
-}
-.dish-detail{
-    width: 70%;
-}
-.dish-detail > h1{
-    margin: 0;
-}
-.dish-weight{
-    color: gray;
-    font-size: 13px;
-}
-.add-to-basket-container{
-    display: flex;
-    width: 70%;
     justify-content: space-between;
 }
-.counter{
-    display: flex;
-    border: 1px solid lightgray;
-    align-items: center;
-    width: 25%;
-    justify-content: space-evenly;
+.main-dish-wrapper{
+    width: 93%;
+    margin: 20px;
 }
+.main-dish-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dish-details{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+.dish-detail{
+    width: 40%;
+}
+.counter-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+.counter-container{
+    display: flex;
+    width: 15%;
+    border: 1px solid lightgray;
+    height: 100%;
+    justify-content: space-between;
+    padding: 0 10px;
+    align-items: center;
+}
+.counter-btns{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+.counter-btns > button{
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+.counter-btns > button:hover{
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.5;
+}
+.add-to-cart-btn{
+    background: #B59571;
+    width: 120px;
+    height: 100%;
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
+
+.add-to-cart-btn:hover{
+    transition: 0.3s;
+    opacity: 0.5;
+}
+
+
 .dish-additions{
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 .dish-addition{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 0;
+    letter-spacing: 1px;
+    font-size: 20px;
 }
-.dish-additions > input{
-    width: 25px;
-}
-.counter-btn{
-    display: flex;
-    flex-direction: column;
-}
-.counter-btn > button{
-    background: none;
-    border: 0;
-    padding: 0;
+
+.dish-addition > input {
+    appearance: none;
+    width: 30px;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    border: 2px solid black;
+    position: relative;
+    transition: all 0.2s ease-in-out;
     cursor: pointer;
 }
-.counter-btn > button:hover{
-    opacity: 0.7;
-    transition: 0.2s;
+
+.dish-addition > input::before {
+    font-family: "Quicksand", sans-serif;
+    position: absolute;
+    bottom: -4px;
+    left: 1px;
+    content: "✔";
+    font-size: 40px;
+    color: #B59571;
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
 }
+
+.dish-addition > input:checked::before {
+    animation: zoom 0.5s ease-in-out;
+    transform: scale(1);
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+    }
+
+    20% {
+        transform: scale(1.5);
+    }
+
+    40% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    70% {
+        transform: scale(1.2);
+    }
+
+    90% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 .back-to-menu{
     background: #B59571;
     width: 150px;

@@ -10,11 +10,13 @@ import './index.css'
 const Main = () => {
     const { foodExxeRelo, delivery, menu } = mainData;
     return(
-        <>
+        <div className='main-info'>
+
             <div className='container'>
                 <SectionName title='О РЕСТОРАНЕ' className='line'/>
                 <Info title={foodExxeRelo.title} className='about-restaurant' text={foodExxeRelo.text} />
             </div>
+
             <div className='container'>
                 <SectionName title='МЕНЮ' className='line'/>
                 <Info title={menu.title} className='about-menu' text={menu.text} />
@@ -33,6 +35,7 @@ const Main = () => {
                     </div>
                 </div>
             </div>
+
             <div className='container'>
                     <SectionName title='ДОСТАВКА' className='line'/>
                     <Info className='about-delivery' title={delivery.title} text={delivery.text} />
@@ -42,7 +45,7 @@ const Main = () => {
                     </div>
             </div>
             <Contacts />
-        </>
+        </div>
     )
 };
 
