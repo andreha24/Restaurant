@@ -8,15 +8,13 @@ import './index.css'
 
 const PersonalPageHeader = () => {
     return(
-        <header className='header-menu'>
+        <div className='main-menu-container'>
             <Aside/>
             <div className='main-wrapper'>
-                <div className='main-container'>
-                    <PersonalArea/>
-                    <PersonalAccount/>
-                </div>
+                <PersonalArea/>
+                <PersonalAccount/>
             </div>
-        </header>
+        </div>
     )
 }
 

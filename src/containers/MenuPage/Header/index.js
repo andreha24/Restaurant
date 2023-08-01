@@ -24,4 +24,3 @@ const MenuPageHeader = () => {
 }
 
 export default MenuPageHeader
-
