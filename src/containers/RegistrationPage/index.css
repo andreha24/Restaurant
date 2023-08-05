@@ -30,6 +30,8 @@
 }
 
 .login-form-input {
+    width: 100%;
+    box-sizing: border-box;
     border: none;
     outline: none;
     border-radius: 15px;

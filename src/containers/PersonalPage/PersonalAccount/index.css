@@ -31,16 +31,18 @@
 .user-preferences{
     width: 40%;
     background-color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
 }
 .user-table-wrapper{
     width: 100%;
-    height: 45%;
+    height: 80%;
     flex-direction: column;
     display: flex;
-    border-bottom: aliceblue;
     align-items: center;
     justify-content: space-between;
-    text-align: center;
 }
 .user-table{
     width: 100%;
@@ -53,5 +55,59 @@
 .user-table-detail{
     width: 80%;
     display: flex;
+    justify-content: space-between;
+}
+.user-order-btn{
+    background: #B59571;
+    width: 120px;
+    height: 35px;
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
+.user-order-btn:hover{
+    transition: 0.4s;
+    opacity: 0.7;
+    border-radius: 8px;
+}
+
+.user-order-modal-wrapper{
+    width: 550px;
+    height: 600px;
+    background-color: #333333;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user-order-modal-wrapper > span{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.user-order-modal{
+    width: 90%;
+    height: 90%;
+}
+.user-order-dish{
+    border: 2px solid white;
+    margin: 20px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+}
+.user-order-dish > div{
+    display: flex;
+    width: 35%;
     justify-content: space-between;
 }

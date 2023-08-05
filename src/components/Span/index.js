@@ -1,11 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-import './index.css'
+import "./index.css";
 
-const Span = ({title, className}) => {
-    return(
-        <span className={className}>{title}</span>
-    )
+function Span({ title, className }) {
+  return <span className={className}>{title}</span>;
 }
 
-export default Span
+Span.propTypes = {
+  title: PropTypes.string,
+  className: PropTypes.string,
+};
+
+export default Span;
