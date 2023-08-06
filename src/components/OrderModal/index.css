@@ -13,7 +13,9 @@
 .close-modal{
     position: absolute;
     top: 10px;
+    background: transparent;
     right: 15px;
+    border: none;
 }
 .close-modal:hover{
     cursor: pointer;

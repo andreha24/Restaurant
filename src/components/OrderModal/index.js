@@ -86,8 +86,8 @@ function OrderModal({ closeModal }) {
       <div className="order-modal">
         <div className="detail-info">
           <img src="/img/other/logo.png" alt="logo" />
-          <button type="button" onClick={closeModal}>
-            <img src="/img/other/closer.png" alt="closer" className="close-modal" />
+          <button type="button" onClick={closeModal} className="close-modal">
+            <img src="/img/other/closer.png" alt="closer" />
           </button>
           <h3>ЗАБРОНИРОВАТЬ СТОЛИК</h3>
           <Form

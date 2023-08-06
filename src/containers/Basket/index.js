@@ -14,8 +14,8 @@ function Basket({ onClick, className }) {
   const cartEmpty = dishes.length <= 0;
   return (
     <div className={`basket ${className}`}>
-      <button type="button" onClick={onClick}>
-        <img src="/img/other/right-arrow.png" alt="close-cart" className="close-cart" />
+      <button type="button" onClick={onClick} className="close-cart">
+        <img src="/img/other/right-arrow.png" alt="close-cart" />
       </button>
       {cartEmpty ? <h1>Корзина пустая</h1>
         : (

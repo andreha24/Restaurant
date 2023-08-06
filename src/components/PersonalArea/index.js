@@ -21,8 +21,8 @@ function PersonalArea() {
         <div className="account-links">
           <Link to="/personal-page"><img src="/img/other/account.png" alt="account" /></Link>
           <div>
-            <button type="button" onClick={changeCartStatus}>
-              <img src="/img/other/basket.png" alt="basket" className="basket-btn" />
+            <button type="button" onClick={changeCartStatus} className="basket-btn">
+              <img src="/img/other/basket.png" alt="basket" />
             </button>
             <span>
               {items.length}
@@ -36,7 +36,7 @@ function PersonalArea() {
         mountOnEnter
         unmountOnExit
       >
-        {(state) => <Basket onclick={changeCartStatus} className={state} />}
+        {(state) => <Basket onClick={changeCartStatus} className={state} />}
       </Transition>
     </>
   );

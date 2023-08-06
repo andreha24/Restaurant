@@ -10,18 +10,12 @@ export const userSlice = createSlice({
     addTable: (state, action) => {
       state.userTable = action.payload;
     },
-    deleteTable: (state) => {
-      state.userTable = null;
-    },
     addOrder: (state, action) => {
       state.userOrder = action.payload;
-    },
-    deleteItemFromOrder: (state, action) => {
-      state.userOrder.splice(action.payload, 1);
     },
   },
 });
 
-export const { addTable, deleteTable, addOrder } = userSlice.actions;
+export const { addTable, addOrder } = userSlice.actions;
 
 export default userSlice.reducer;

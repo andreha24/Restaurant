@@ -56,11 +56,11 @@ function CartItem({ dish, index }) {
         onClick={() => {
           dispatch(deleteItem(index));
         }}
+        className="garbage"
       >
         <img
           src="/img/other/garbage.png"
           alt=""
-          className="garbage"
         />
       </button>
     </div>

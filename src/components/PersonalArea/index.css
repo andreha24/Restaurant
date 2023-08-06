@@ -1,3 +1,7 @@
+.basket-btn{
+    background: transparent;
+    border: 0;
+}
 .basket-btn:hover{
     cursor: pointer;
     transition: 0.3s;
